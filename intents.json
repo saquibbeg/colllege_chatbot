@@ -1,0 +1,49 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening"],
+      "responses": ["Hello!", "Hi there!", "Greetings!"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "Goodbye", "See you later", "Catch you later"],
+      "responses": ["Goodbye!", "See you!", "Take care!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Much appreciated"],
+      "responses": ["You're welcome!", "Glad I could help!", "Anytime!"]
+    },
+    {
+      "tag": "faculty",
+      "patterns": ["Tell me about faculty", "Who are the faculty members?", "Give me faculty details"],
+      "responses": ["We have experienced faculty members in various departments."]
+    },
+    {
+      "tag": "timing",
+      "patterns": ["What are the college timings?", "When does college start?", "College hours?", "Class schedule"],
+      "responses": ["College timings are from 9 AM to 5 PM, Monday to Friday."]
+    },
+    {
+      "tag": "fees",
+      "patterns": ["What is the fee structure?", "How much is the college fee?", "Tell me the course fees"],
+      "responses": ["The fee structure varies by course. Please visit our official website or contact admin for details."]
+    },
+    {
+      "tag": "placement",
+      "patterns": ["Tell me about placements", "What companies visit for placement?", "Placement stats?"],
+      "responses": ["Top companies like TCS, Infosys, and Wipro visit our campus for placements. We have a strong placement record."]
+    },
+    {
+      "tag": "courses",
+      "patterns": ["What courses are offered?", "List of available courses", "Which programs can I join?"],
+      "responses": ["We offer undergraduate and postgraduate courses in Engineering, Science, Arts, and Management."]
+    },
+    {
+      "tag": "college_info",
+      "patterns": ["Tell me about the college", "What is this college known for?", "General info about college"],
+      "responses": ["Our college is known for quality education, experienced faculty, modern infrastructure, and excellent placements."]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Chatbot</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; }
+    #chatbox { max-width: 600px; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; }
+    .bot, .user { padding: 10px; margin: 5px 0; border-radius: 5px; }
+    .bot { background: #dfeffc; }
+    .user { background: #c4ffc4; text-align: right; }
+    #userInput { width: 80%; padding: 10px; }
+    #sendBtn { padding: 10px; }
+  </style>
+</head>
+<body>
+
+<div id="chatbox">
+  <div><strong>Bot:</strong> Hello! How can I help you today?</div>
+</div>
+
+<div style="text-align: center; margin-top: 10px;">
+  <input id="userInput" type="text" placeholder="Type a message..." />
+  <button id="sendBtn" onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+  function sendMessage() {
+    var userText = document.getElementById("userInput").value;
+    if (!userText) return;
+
+    // Show user message
+    document.getElementById("chatbox").innerHTML +=
+      `<div class="user"><strong>You:</strong> ${userText}</div>`;
+
+    // Fetch response from backend
+    fetch(`/get?msg=${encodeURIComponent(userText)}`)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("chatbox").innerHTML +=
+          `<div class="bot"><strong>Bot:</strong> ${data.response}</div>`;
+      });
+
+    document.getElementById("userInput").value = "";
+  }
+</script>
+
+</body>
+</html>
